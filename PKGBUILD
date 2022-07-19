@@ -14,7 +14,7 @@ license=('LGPL-2.0-or-later')
 depends=('qt5-declarative>=5.11')
 makedepends=('cmake')
 source=("${url}/archive/refs/tags/$pkgver.tar.gz")
-sha256sums=('SKIP!!')
+sha256sums=('afad4b4efb5957d5422377ac3959d3ec2c499654593384e3d97a837a703bde78')
 
 build() {
     cd $pkgname-$pkgver
