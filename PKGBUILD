@@ -17,7 +17,7 @@ source=("${url}/archive/refs/tags/$pkgver.tar.gz")
 sha256sums=('afad4b4efb5957d5422377ac3959d3ec2c499654593384e3d97a837a703bde78')
 
 build() {
-    cd $pkgname-$pkgver
+    cd libglacierapp-$pkgver
     mkdir -p build
     cd build
     cmake \
@@ -31,7 +31,7 @@ build() {
 }
 
 package() {
-    cd $pkgname-$pkgver
+    cd libglacierapp-$pkgver
     cd build
     make DESTDIR="$pkgdir/" install
 }
