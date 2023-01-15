@@ -5,8 +5,8 @@
 # Maintainer: James Kittsmiller (AJSlye) <james@nulogicsystems.com>
 
 pkgname=qt5-glacier-app
-pkgver=0.9
-pkgrel=2
+pkgver=0.9.2
+pkgrel=1
 pkgdesc="Glacier Application library"
 arch=('x86_64' 'aarch64')
 url="https://github.com/nemomobile-ux/libglacierapp"
@@ -15,7 +15,7 @@ depends=('qt5-declarative>=5.11')
 makedepends=('cmake')
 provides=('libglacierapp')
 source=("${url}/archive/refs/tags/$pkgver.tar.gz")
-sha256sums=('f3d0dd7b505ad86b9e7b57c39de190158f0dd0566ff772d596b84e263d4395b2')
+sha256sums=('f9a56adf91dc8269727ecb1b89b649b584dafdb9c8695737c031710ba2d20cb8')
 
 build() {
     cd libglacierapp-$pkgver
