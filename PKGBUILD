@@ -4,24 +4,25 @@
 # Contributor: Alexey Andreyev <aa13q@ya.ru>
 # Maintainer: James Kittsmiller (AJSlye) <james@nulogicsystems.com>
 
-pkgname=qt5-glacier-app
-pkgver=0.9.2
+pkgname=qt6-glacier-app
+pkgver=1.0.1
 pkgrel=1
 pkgdesc="Glacier Application library"
 arch=('x86_64' 'aarch64')
 url="https://github.com/nemomobile-ux/libglacierapp"
 license=('LGPL-2.0-or-later')
-depends=('qt5-declarative>=5.11')
+depends=('qt6-declarative>=6.0')
 makedepends=('cmake')
 provides=('libglacierapp')
 source=("${url}/archive/refs/tags/$pkgver.tar.gz")
-sha256sums=('f9a56adf91dc8269727ecb1b89b649b584dafdb9c8695737c031710ba2d20cb8')
+sha256sums=('378160152061942bdf114b2713ca2eb8fd62b2eef8962dc050cab8691f9aba95')
 
 build() {
     cd libglacierapp-$pkgver
     mkdir -p build
     cd build
     cmake \
+	-DUSE_QT6:BOOL=true \
 	-DCMAKE_BUILD_TYPE=Release \
 	-DCMAKE_INSTALL_PREFIX=/usr \
 	-DCMAKE_INSTALL_LIBDIR=lib \
