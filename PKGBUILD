@@ -5,7 +5,7 @@
 # Maintainer: James Kittsmiller (AJSlye) <james@nulogicsystems.com>
 
 pkgname=qt6-glacier-app
-pkgver=1.0.3
+pkgver=1.1
 pkgrel=1
 pkgdesc="Glacier Application library"
 arch=('x86_64' 'aarch64')
@@ -15,7 +15,7 @@ depends=('qt6-declarative>=6.0')
 makedepends=('cmake')
 provides=('libglacierapp')
 source=("${url}/archive/refs/tags/$pkgver.tar.gz")
-sha256sums=('0f6c2a5458661e8e31c6680f159afa037063d72540bf2272223dbe1fd2cd5654')
+sha256sums=('b3c8aaf48ecab8093c1b3c4ab4a54f2bf8e5e13364e577f6be8c0f86217c5923')
 
 build() {
     cd libglacierapp-$pkgver
